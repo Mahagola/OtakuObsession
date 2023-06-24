@@ -38,7 +38,9 @@ body {
 .card .card-body {
     margin-top: 20px;
 }
-
+#charNameInput {
+    background-color: white
+}
 .button-group {
     display: flex;
     justify-content: space-between;
