@@ -1,0 +1,84 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #353540;
+}
+
+.card {
+    width: 200px;
+    margin: 0 auto;
+    border: 2px solid #e73c3c;
+    border-radius: 10px;
+    padding: 20px;
+    transition: box-shadow 300ms ease-in-out;
+}
+
+.card-image-top {
+    max-width: 100%;
+    height: auto;
+}
+
+.card:hover {
+    box-shadow: 0 0 0 4px rgba(231, 60, 60, 0.4);
+}
+
+.card .card-content {
+    position: relative;
+}
+
+.card .card-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+}
+
+.card .card-body {
+    margin-top: 20px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    transition: background-color 0.3s ease;
+}
+#rst{
+    margin-right: 30px;
+}
+
+.btn:hover {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+#scoreboard {
+    margin-top: 20px;
+    display: inline-block;
+    width: 250px;
+    height: 40px;
+    box-sizing: border-box;
+    outline: none;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 10px;
+    background: rgb(255, 255, 255);
+    color: black;
+    font-family: Montserrat;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.5s ease-in-out;
+  }
+.correct{
+   background: rgb(26, 224, 26) !important;
+   
+}
+
+.incorrect {
+    background:rgb(231, 19, 19) !important;
+}
