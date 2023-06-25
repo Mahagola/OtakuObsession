@@ -17,9 +17,9 @@ function get_id() {
         })
         .then((data) => {
             const animeEntries = data.data;
-
+            const temp_id = Math.floor(Math.random() * 24);
             if (animeEntries.length > 0) {
-                const animeId = animeEntries[2].mal_id; // Retrieve the ID of the first anime entry
+                const animeId = animeEntries[temp_id].mal_id; // Retrieve the ID of the first anime entry
 
                 // Use the animeId directly or pass it to another function for further processing
                 console.log('Anime ID:', animeId);
@@ -83,14 +83,19 @@ function guess_char() {
         scoreboard.classList.add('correct')
         setTimeout(() => scoreboard.classList.remove('correct'), 500);
     } else {
-        score -= 10;
+        if(score>0){
+             score -= 10;   
+        }        
         scoreboard.classList.add('incorrect')
         setTimeout(() => scoreboard.classList.remove('incorrect'), 500);
     }
     score_cur.textContent = 'Your Score : ' + score;
     if (score >= 100) {
-        alert('You won the game!');
-        reset_func();
+        score_cur.textContent = 'Your Score : ' + score;
+        setTimeout(() => {
+            alert('Congrats!!, You won the game!');
+            reset_func();
+        },500);
     }
     get_id();
 }
