@@ -89,6 +89,7 @@ function guess_char() {
         scoreboard.classList.add('incorrect')
         setTimeout(() => scoreboard.classList.remove('incorrect'), 500);
     }
+    char_input.value = ""; // Clear the text box
     score_cur.textContent = 'Your Score : ' + score;
     if (score >= 100) {
         score_cur.textContent = 'Your Score : ' + score;
